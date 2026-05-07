@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maciço Inox | Inox Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0a0a0a; --gold: #C5A059; --text: #e0e0e0; --insta: #E1306C; }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* HEADER */
+        header {
+            position: fixed; width: 100%; background: rgba(10,10,10,0.98);
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; border-bottom: 1px solid var(--gold);
+        }
+        .logo { color: var(--gold); font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; cursor: pointer; }
+        nav a:hover { color: var(--gold); }
+
+        /* SECTIONS CONTROL */
+        .page { display: none; padding-top: 80px; }
+        .page.active { display: block; }
+
+        /* HERO */
+        .hero {
+            height: 90vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+            url('img/foto1.jpg');
+            background-size: cover; background-position: center; padding: 20px;
+        }
+        .hero h1 { font-size: 3rem; color: #fff; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* BOTÕES */
+        .btn-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .btn {
+            padding: 12px 25px; color: black; text-decoration: none;
+            border-radius: 5px; font-weight: 600; transition: 0.3s; border: none; cursor: pointer;
+        }
+        .btn-gold { background: var(--gold); }
+        .btn-insta { background: var(--insta); color: white; }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        section { padding: 60px 10%; }
+        h2 { color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 2rem; }
+
+        /* GRID SERVIÇOS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: #151515; padding: 30px; border-left: 4px solid var(--gold); text-align: center; }
+
+        /* PREVIEW IMAGENS HOME */
+        .home-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .home-gallery img { width: 100%; height: 250px; object-fit: cover; border: 1px solid #333; }
+
+        /* GALERIA COMPLETA */
+        .full-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+        .full-gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; }
+
+        /* CONTATO */
+        .contact-box { text-align: center; max-width: 600px; margin: 0 auto; }
+        .contact-info { margin: 20px 0; font-size: 1.2rem; }
+
+        /* FLOATING BUTTONS */
+        .float-group { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
+        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .float-wa { background: #25D366; }
+        .float-ig { background: var(--insta); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .home-gallery { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+
+        /* ANIMAÇÃO */
+        .reveal { opacity: 0; transform: translateY(20px); transition: 0.6s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">MACIÇO INOX</div>
+    <nav>
+        <a onclick="showPage('home')">Início</a>
+        <a onclick="showPage('galeria')">Fotos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<main id="home" class="page active">
+    <section class="hero">
+        <h1 class="reveal">Maciço Inox</h1>
+        <p class="reveal">A excelência do aço inoxidável em sua residência.</p>
+        <div class="btn-container reveal">
+            <a href="https://wa.me/5548999999999" class="btn btn-gold">WhatsApp</a>
+            <a href="https://instagram.com/macicoinox" class="btn btn-insta">Nosso Instagram</a>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2 class="reveal">Nossas Soluções</h2>
+        <div class="grid">
+            <div class="card reveal"><h3>Corrimãos</h3><p>Segurança e brilho com acabamento cirúrgico.</p></div>
+            <div class="card reveal"><h3>Portões</h3><p>Modernidade e resistência contra maresia.</p></div>
+            <div class="card reveal"><h3>Mobiliário</h3><p>Peças exclusivas e personalizadas em inox.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="reveal">Projetos Recentes</h2>
+        <div class="home-gallery reveal">
+            <img src="img/foto1.jpg" alt="Inox 1">
+            <img src="img/foto2.jpg" alt="Inox 2">
+            <img src="img/foto3.jpg" alt="Inox 3">
+        </div>
+        <div style="text-align:center">
+            <button onclick="showPage('galeria')" class="btn btn-gold reveal">Ver Todas as Imagens</button>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contact-box reveal">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <p>📍 Atendimento em toda Grande Florianópolis</p>
+                <p>📱 (48) 99999-9999</p>
+            </div>
+            <a href="https://wa.me/5548999999999" class="btn btn-gold" style="display:block; margin-bottom:10px;">Chamar no WhatsApp</a>
+            <p>Siga-nos no Instagram para novidades:</p>
+            <a href="https://instagram.com/macicoinox" class="btn btn-insta" style="display:block;">@macicoinox</a>
+        </div>
+    </section>
+</main>
+
+<main id="galeria" class="page">
+    <section>
+        <h2>Galeria de Projetos</h2>
+        <div class="full-gallery">
+            <img src="img/foto1.jpg">
+            <img src="img/foto2.jpg">
+            <img src="img/foto3.jpg">
+            <img src="img/foto4.jpg">
+            <img src="img/foto5.jpg">
+            <img src="img/foto6.jpg">
+            <img src="img/foto7.jpg">
+            <img src="img/foto8.jpg">
+            <img src="img/foto9.jpg">
+            <img src="img/foto10.jpg">
+            <img src="img/foto11.jpg">
+            <img src="img/foto12.jpg">
+            <img src="img/foto13.jpg">
+            <img src="img/foto14.jpg">
+            <img src="img/foto15.jpg">
+            <img src="img/foto16.jpg">
+            <img src="img/foto17.jpg">
+            <img src="img/foto18.jpg">
+            <img src="img/foto19.jpg">
+            <img src="img/foto20.jpg">
+            <img src="img/foto21.jpg">
+            <img src="img/foto22.jpg">
+            <img src="img/foto23.jpg">
+            <img src="img/foto24.jpg">
+            <img src="img/foto25.jpg">
+            <img src="img/foto26.jpg">
+            <img src="img/foto27.jpg">
+            <img src="img/foto28.jpg">
+            <img src="img/foto29.jpg">
+            <img src="img/foto30.jpg">
+            <img src="img/foto31.jpg">
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <button onclick="showPage('home')" class="btn btn-gold">← Voltar para Início</button>
+        </div>
+    </section>
+</main>
+
+<div class="float-group">
+    <a href="https://wa.me/5548999999999" class="float-btn float-wa" title="WhatsApp">WA</a>
+    <a href="https://instagram.com/macicoinox" class="float-btn float-ig" title="Instagram">IG</a>
+</div>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
