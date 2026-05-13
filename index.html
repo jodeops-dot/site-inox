@@ -4,8 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maciço Inox | Projetos em Inox Premium</title>
-    
+
+    <title>Maciço Inox | Corrimãos e Projetos em Aço Inox em São José SC</title>
+
+    <meta name="description" content="Maciço Inox em São José SC. Especialistas em corrimãos, guarda corpo e projetos premium em aço inox sob medida.">
+
+    <meta name="keywords" content="inox, corrimão inox, guarda corpo inox, aço inox, Maciço Inox, São José SC, Florianópolis, projetos inox">
+
+    <meta name="author" content="Maciço Inox">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#C5A059">
+
+    <meta name="geo.region" content="BR-SC">
+    <meta name="geo.placename" content="São José">
+
+    <meta property="og:title" content="Maciço Inox | Projetos em Inox Premium">
+
+    <meta property="og:description" content="Especialistas em projetos sob medida em aço inox em São José e Florianópolis.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="img/foto1.jpg">
+
+    <link rel="icon" href="img/logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -31,7 +55,6 @@
             overflow-x: hidden;
         }
 
-        /* HEADER & NAVEGAÇÃO */
         header {
             position: fixed;
             top: 0;
@@ -63,7 +86,6 @@
             color: white;
             text-decoration: none;
             font-size: 0.9rem;
-            font-weight: 400;
             transition: 0.3s;
             cursor: pointer;
         }
@@ -72,10 +94,9 @@
             color: var(--gold);
         }
 
-        /* PÁGINAS (HOME / GALERIA) */
         .page {
             display: none;
-            padding-top: 70px; /* Espaço do header fixo */
+            padding-top: 70px;
             animation: fadeIn 0.5s ease;
         }
 
@@ -84,20 +105,31 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* HERO (INÍCIO) */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/foto1.jpg');
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('img/foto1.jpg');
+
             background-size: cover;
             background-position: center;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             text-align: center;
             padding: 20px;
         }
@@ -106,7 +138,6 @@
             font-size: clamp(2.5rem, 8vw, 4.5rem);
             color: white;
             margin-bottom: 15px;
-            font-weight: 700;
         }
 
         .hero p {
@@ -116,7 +147,6 @@
             color: #ccc;
         }
 
-        /* BOTÕES */
         .btns {
             display: flex;
             gap: 15px;
@@ -133,14 +163,23 @@
             border: none;
             cursor: pointer;
             display: inline-block;
-            text-align: center;
         }
 
-        .btn-gold { background: var(--gold); color: black; }
-        .btn-insta { background: var(--insta); color: white; }
-        .btn-gold:hover, .btn-insta:hover { transform: translateY(-3px); filter: brightness(1.1); }
+        .btn-gold {
+            background: var(--gold);
+            color: black;
+        }
 
-        /* SEÇÕES */
+        .btn-insta {
+            background: var(--insta);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
         section {
             padding: 80px 10%;
         }
@@ -152,7 +191,6 @@
             margin-bottom: 50px;
         }
 
-        /* SERVIÇOS (CARDS) */
         .grid-servicos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -173,17 +211,27 @@
             transform: translateY(-10px);
         }
 
-        .card h3 { color: var(--gold); margin-bottom: 15px; }
-
-        /* GALERIA RESUMIDA NA HOME */
-        .home-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
+        .card h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
         }
 
-        .home-gallery img, .full-gallery img {
+        .home-gallery,
+        .full-gallery {
+            display: grid;
+            gap: 15px;
+        }
+
+        .home-gallery {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .full-gallery {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .home-gallery img,
+        .full-gallery img {
             width: 100%;
             height: 300px;
             object-fit: cover;
@@ -191,13 +239,11 @@
             transition: 0.3s;
         }
 
-        .full-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
+        .home-gallery img:hover,
+        .full-gallery img:hover {
+            transform: scale(1.03);
         }
 
-        /* FORMULÁRIO DE CONTATO */
         .contact-box {
             max-width: 800px;
             margin: 0 auto;
@@ -206,8 +252,13 @@
             border-radius: 15px;
         }
 
-        .contact-info { text-align: center; margin-bottom: 30px; }
-        input, textarea {
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        input,
+        textarea {
             width: 100%;
             padding: 15px;
             margin-bottom: 15px;
@@ -217,7 +268,6 @@
             border-radius: 5px;
         }
 
-        /* BOTÕES FLUTUANTES (CELULAR E PC) */
         .float-group {
             position: fixed;
             bottom: 25px;
@@ -239,207 +289,226 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
         }
 
-        .float-wa { background: var(--wa); }
-        .float-ig { background: var(--insta); }
-        .float-btn:hover { transform: scale(1.1); }
+        .float-wa {
+            background: var(--wa);
+        }
 
-        /* REVEAL ON SCROLL */
-        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .float-ig {
+            background: var(--insta);
+        }
 
-        /* AJUSTES PARA CELULAR */
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s all ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
-            nav { display: none; } /* Esconde menu de texto no celular */
-            section { padding: 60px 5%; }
-            .hero h1 { margin-top: 50px; }
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                margin-top: 50px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">Maciço Inox</div>
-        <nav>
-            <a onclick="irPara('inicio')">Início</a>
-            <a onclick="irPara('servicos')">Serviços</a>
-            <a onclick="irPara('sobre')">Sobre</a>
-            <a onclick="irPara('projetos')">Projetos</a>
-            <a onclick="irPara('contato')">Orçamento</a>
-            <a onclick="showPage('galeria')">Galeria Completa</a>
-        </nav>
-    </header>
+<header>
 
-    <main id="home" class="page active">
-        
-        <section class="hero" id="inicio">
-            <h1 class="reveal">Maciço Inox</h1>
-            <p class="reveal">Soluções em aço inoxidável sob medida com acabamento de alto padrão.</p>
-            <div class="btns reveal">
-                <a href="https://wa.me/554891459017" class="btn btn-gold">Chamar no WhatsApp</a>
-                <a href="https://instagram.com/macicoinox" class="btn btn-insta">Ver Instagram</a>
-            </div>
-        </section>
+    <div class="logo">Maciço Inox</div>
 
-        <section id="servicos">
-            <h2 class="reveal">Nossos Serviços</h2>
-            <div class="grid-servicos">
-                <div class="card reveal">
-                    <h3>Corrimãos</h3>
-                    <p>Segurança e elegância com polimento espelhado ou escovado.</p>
-                </div>
-                <div class="card reveal">
-                    <h3>Peças Sobre medida</h3>
-                    <p>Alta resistência, contra corrosão, ideal para o litoral.</p>
-                </div>
-            </div>
-        </section>
+    <nav>
+        <a onclick="irPara('inicio')">Início</a>
+        <a onclick="irPara('servicos')">Serviços</a>
+        <a onclick="irPara('sobre')">Sobre</a>
+        <a onclick="irPara('projetos')">Projetos</a>
+        <a onclick="irPara('contato')">Orçamento</a>
+    </nav>
 
-        <section id="sobre">
-            <h2 class="reveal">Excelência em Inox</h2>
-            <div class="contact-box reveal">
-                <p style="text-align: center; line-height: 1.8;">
-                    Com sede em São José (SC), há mais de vinte anos a Maciço Inox é especialista em transformar aço em arte. 
-                    Atendemos projetos residenciais e comerciais focando sempre no detalhe e na satisfação do cliente.
-                </p>
-            </div>
-        </section>
+</header>
 
-        <section id="projetos">
-            <h2 class="reveal">Projetos Recentes</h2>
-            <div class="home-gallery reveal">
-                <img src="img/foto1.jpg" alt="Obra 1">
-                <img src="img/foto2.jpg" alt="Obra 2">
-                <img src="img/foto3.jpg" alt="Obra 3">
-            </div>
-            <div style="text-align: center;">
-                <button onclick="showPage('galeria')" class="btn btn-gold">Abrir Galeria Completa</button>
-            </div>
-        </section>
+<main class="page active">
 
-        <section id="contato">
-            <div class="contact-box reveal">
-                <h2>Orçamento Grátis</h2>
-                <div class="contact-info">
-                    <p>📍 Atendemos toda a região de Florianópolis</p>
-                    <p>📞 (48) 3246-3076</p>
-                </div>
-                <form onsubmit="enviarEmail(event)">
-                    <input type="text" id="nome" placeholder="Seu Nome" required>
-                    <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
-                    <textarea id="mensagem" rows="4" placeholder="O que você precisa?" required></textarea>
-                    <button type="submit" class="btn btn-gold" style="width: 100%;">Enviar Pedido</button>
-                </form>
-            </div>
-        </section>
+<section class="hero" id="inicio">
 
-    </main>
+    <h1 class="reveal">Maciço Inox</h1>
 
-    <main id="galeria" class="page">
-        <section>
-            <h2>Nossa Galeria</h2>
-            <div class="full-gallery">
-    <img src="img/foto1.jpg">
-    <img src="img/foto2.jpg">
-    <img src="img/foto3.jpg">
-    <img src="img/foto4.jpg">
-    <img src="img/foto5.jpg">
-    <img src="img/foto6.jpg">
-    <img src="img/foto7.jpg">
-    <img src="img/foto8.jpg">
-    <img src="img/foto9.jpg">
-    <img src="img/foto10.jpg">
-    <img src="img/foto11.jpg">
-    <img src="img/foto12.jpg">
-    <img src="img/foto13.jpg">
-    <img src="img/foto14.jpg">
-    <img src="img/foto15.jpg">
-    <img src="img/foto16.jpg">
-    <img src="img/foto17.jpg">
-    <img src="img/foto18.jpg">
-    <img src="img/foto19.jpg">
-    <img src="img/foto20.jpg">
-    <img src="img/foto21.jpg">
-    <img src="img/foto22.jpg">
-    <img src="img/foto23.jpg">
-    <img src="img/foto24.jpg">
-    <img src="img/foto25.jpg">
-    <img src="img/foto26.jpg">
-    <img src="img/foto27.jpg">
-    <img src="img/foto28.jpg">
-    <img src="img/foto29.jpg">
-    <img src="img/foto30.jpg">
-    <img src="img/foto31.jpg">
+    <p class="reveal">
+        Soluções premium em aço inox sob medida para residências e empresas.
+    </p>
 
-    <img src="img/IMG-20260507-WA0053.jpg">
-    <img src="img/IMG-20260507-WA0054.jpg">
-    <img src="img/IMG-20260507-WA0055.jpg">
-    <img src="img/IMG-20260507-WA0056.jpg">
-    <img src="img/IMG-20260507-WA0057.jpg">
-    <img src="img/IMG-20260507-WA0058.jpg">
-    <img src="img/IMG-20260507-WA0059.jpg">
-    <img src="img/IMG-20260507-WA0060.jpg">
-    <img src="img/IMG-20260507-WA0061.jpg">
-    <img src="img/IMG-20260507-WA0062.jpg">
-           <img src="img/IMG-20260507-WA0063.jpg">
-           <img src="img/IMG-20260507-WA0064.jpg">
-             <img src="img/IMG-20260507-WA0065.jpg">
-             <img src="img/IMG-20260507-WA0066.jpg">
-             <img src="img/IMG-20260507-WA0067.jpg">
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <button onclick="showPage('home')" class="btn btn-gold">Voltar ao Início</button>
-            </div>
-        </section>
-    </main>
+    <div class="btns reveal">
 
-    <div class="float-group">
-        <a href="https://wa.me/554891459017" class="float-btn float-wa" title="WhatsApp">WA</a>
-        <a href="https://instagram.com/macicoinox" class="float-btn float-ig" title="Instagram">IG</a>
+        <a href="https://wa.me/554891459017" class="btn btn-gold">
+            WhatsApp
+        </a>
+
+        <a href="https://instagram.com/macicoinox" class="btn btn-insta">
+            Instagram
+        </a>
+
     </div>
 
-    <script>
-        // Função para trocar de página
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0, 0);
+</section>
+
+<section id="servicos">
+
+    <h2 class="reveal">Nossos Serviços</h2>
+
+    <div class="grid-servicos">
+
+        <div class="card reveal">
+            <h3>Corrimãos</h3>
+            <p>Projetos sofisticados em inox para escadas e ambientes premium.</p>
+        </div>
+
+        <div class="card reveal">
+            <h3>Peças Sob Medida</h3>
+            <p>Estruturas personalizadas resistentes à corrosão e ao litoral.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projetos">
+
+    <h2 class="reveal">Projetos Recentes</h2>
+
+    <div class="home-gallery reveal">
+
+        <img src="img/foto1.jpg" alt="Corrimão em aço inox premium">
+        <img src="img/foto2.jpg" alt="Projeto residencial em inox">
+        <img src="img/foto3.jpg" alt="Guarda corpo em aço inox">
+
+    </div>
+
+</section>
+
+<section id="contato">
+
+    <div class="contact-box reveal">
+
+        <h2>Solicite um Orçamento</h2>
+
+        <div class="contact-info">
+            <p>📍 São José - Santa Catarina</p>
+            <p>📞 (48) 3246-3076</p>
+        </div>
+
+        <form onsubmit="enviarWhats(event)">
+
+            <input type="text" id="nome" placeholder="Seu nome" required>
+
+            <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
+
+            <textarea id="mensagem" rows="4" placeholder="Descreva seu projeto" required></textarea>
+
+            <button type="submit" class="btn btn-gold" style="width:100%;">
+                Enviar Pedido
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+<div class="float-group">
+
+    <a href="https://wa.me/554891459017"
+       class="float-btn float-wa">
+        WA
+    </a>
+
+    <a href="https://instagram.com/macicoinox"
+       class="float-btn float-ig">
+        IG
+    </a>
+
+</div>
+
+<script>
+
+function irPara(id) {
+
+    const alvo = document.getElementById(id);
+
+    if(alvo) {
+        alvo.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
         }
 
-        // Navegação inteligente entre seções
-        function irPara(id) {
-            showPage('home'); // Garante que está na home
-            setTimeout(() => {
-                const alvo = document.getElementById(id);
-                if(alvo) alvo.scrollIntoView({ behavior: 'smooth' });
-            }, 50);
-        }
+    });
 
-        // Animação ao descer a página
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
+}, { threshold: 0.1 });
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+});
 
-        // Envio do formulário via E-mail
-        function enviarEmail(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const tel = document.getElementById('telefone').value;
-            const msg = document.getElementById('mensagem').value;
-            
-            const texto = `Olá, meu nome é ${nome}. Contato: ${tel}. Desejo um orçamento para: ${msg}`;
-            window.location.href = `mailto:macicoinox@gmail.com?subject=Orçamento Site&body=${encodeURIComponent(texto)}`;
-        }
-    </script>
+function enviarWhats(e) {
+
+    e.preventDefault();
+
+    const nome =
+        document.getElementById('nome').value;
+
+    const telefone =
+        document.getElementById('telefone').value;
+
+    const mensagem =
+        document.getElementById('mensagem').value;
+
+    const texto =
+`Olá, meu nome é ${nome}
+
+Telefone: ${telefone}
+
+Projeto:
+${mensagem}`;
+
+    window.open(
+`https://wa.me/554891459017?text=${encodeURIComponent(texto)}`,
+'_blank'
+);
+
+}
+
+</script>
 
 </body>
-    </html>
+</html>
